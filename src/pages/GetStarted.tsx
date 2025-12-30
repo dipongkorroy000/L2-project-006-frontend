@@ -17,8 +17,8 @@ const GetStarted = () => {
   };
 
   return (
-    <>
-      <div className="p-6 max-w-md mx-auto">
+    <section className="lg:my-20 my-10">
+      <div className="max-w-md mx-auto px-10">
         <h2 className="text-xl font-semibold mb-4">🔍 Find Your Parcel</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -36,7 +36,9 @@ const GetStarted = () => {
 
         {isLoading && <p className="my-10 text-center">Loading parcel info...</p>}
         {isError && <p className="mt-4 text-red-500">Parcel not found or error occurred.</p>}
+      </div>
 
+      <div>
         {parcel && !isLoading && (
           <div className="mt-6 p-4 border rounded shadow">
             <h3 className="text-lg font-bold">📦 {parcel.title}</h3>
@@ -65,8 +67,9 @@ const GetStarted = () => {
           </div>
         )}
       </div>
+
       <Faq></Faq>
-    </>
+    </section>
   );
 };
 

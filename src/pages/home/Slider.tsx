@@ -21,7 +21,7 @@ const Slider = () => {
       <img
         src={images[current]}
         alt={`Slide ${current + 1}`}
-        className="w-full 2xl:h-80 xl:h-72 lg:h-56 md:h-56 h-48 mx-auto object-cover transition-all duration-700 ease-in-out border-2"
+        className="w-full 2xl:h-80 xl:h-72 lg:h-56 md:h-56 h-48 mx-auto object-cover transition-all duration-700 ease-in-out"
       />
     </div>
   );

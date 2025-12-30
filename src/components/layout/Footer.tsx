@@ -16,7 +16,7 @@ const defaultSections = [
     title: "Product",
     links: [
       {name: "Overview", href: "#"},
-      {name: "Overview", href: "#"},
+      {name: "Frequently asked questions", href: "#"},
     ],
   },
   {

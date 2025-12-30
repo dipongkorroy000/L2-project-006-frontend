@@ -10,9 +10,9 @@ export default function HowItWorksPage() {
         </p>
       </div>
 
-      <div className="grid xl:gap-8 gap-5 sm:grid-cols-2 lg:grid-cols-4 max-md:mx-16">
+      <div className="grid xl:gap-8 gap-5 sm:grid-cols-2 lg:grid-cols-4 max-md:mx-10">
         {/* Step 1 */}
-        <Card className="shadow-md xl:gap-3 md:gap-2 gap-1">
+        <Card className="shadow-sm xl:gap-3 md:gap-2 gap-1">
           <CardHeader>
             <CardTitle className="xl:text-xl text-lg font-semibold">1. Book Your Delivery</CardTitle>
           </CardHeader>
@@ -22,7 +22,7 @@ export default function HowItWorksPage() {
         </Card>
 
         {/* Step 2 */}
-        <Card className="shadow-md xl:gap-3 md:gap-2 gap-1">
+        <Card className="shadow-sm xl:gap-3 md:gap-2 gap-1">
           <CardHeader>
             <CardTitle className="xl:text-xl text-lg font-semibold">2. Pickup</CardTitle>
           </CardHeader>
@@ -32,7 +32,7 @@ export default function HowItWorksPage() {
         </Card>
 
         {/* Step 3 */}
-        <Card className="shadow-md xl:gap-3 md:gap-2 gap-1">
+        <Card className="shadow-sm xl:gap-3 md:gap-2 gap-1">
           <CardHeader>
             <CardTitle className="xl:text-xl text-lg font-semibold">3. Tracking</CardTitle>
           </CardHeader>
@@ -42,7 +42,7 @@ export default function HowItWorksPage() {
         </Card>
 
         {/* Step 4 */}
-        <Card className="shadow-md xl:gap-3 md:gap-2 gap-1">
+        <Card className="shadow-sm xl:gap-3 md:gap-2 gap-1">
           <CardHeader>
             <CardTitle className="xl:text-xl text-lg font-semibold">4. Delivery</CardTitle>
           </CardHeader>

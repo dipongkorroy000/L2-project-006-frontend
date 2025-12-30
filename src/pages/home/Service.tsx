@@ -43,11 +43,12 @@ const Service = () => {
       image: flexiblePayment,
     },
   };
+
   return (
     <section className="2xl:py-20 xl:py-16 lg:py-12 md:py-10 py-8">
       <div className="container mx-auto 2xl:space-y-10 xl:space-y-8 lg:space-y-6 md:space-y-4 space-y-3">
-        <div className="2xl:space-y-10 xl:space-y-8 lg:space-y-6 md:space-y-4 space-y-3 text-center">
-          <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl font-extrabold">{des.heading}</h1>
+        <div className="lg:space-y-6 md:space-y-4 space-y-3 text-center">
+          <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold">{des.heading}</h1>
           <p className="text-muted-foreground text-balance 2xl:text-xl xl:text-lg lg:text-sm text-sm">{des.description}</p>
         </div>
         <div className="relative flex justify-center">

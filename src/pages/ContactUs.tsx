@@ -34,49 +34,53 @@ const ContactUs = ({
   chatLink = "Start Chat",
 }: Contact7Props) => {
   return (
-    <section className="bg-background py-32">
-      <div className="container mx-auto">
-        <div className="mb-14">
-          <h1 className="mb-3 mt-2 text-balance text-3xl font-semibold md:text-4xl">{title}</h1>
-          <p className="text-muted-foreground max-w-xl text-lg">{description}</p>
+    <section className="bg-background py-10 max-md:py-5 max-md:px-5">
+      <div className="container mx-auto lg:space-y-6 md:space-y-4 space-y-3">
+        <div className="lg:space-y-6 md:space-y-4 space-y-3">
+          <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold">{title}</h1>
+          <p className="text-muted-foreground text-balance 2xl:text-xl xl:text-lg lg:text-sm text-sm">{description}</p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="bg-muted rounded-lg p-6">
-            <span className="bg-accent mb-3 flex size-12 flex-col items-center justify-center rounded-full">
+
+        <div className="grid gap-6 md:grid-cols-2 max-md:gap-3">
+          <div className="bg-muted rounded-lg p-6 max-md:p-5">
+            <span className="bg-accent mb-3 max-md:mb-0 flex size-12 flex-col items-center justify-center rounded-full">
               <Mail className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-lg font-semibold">{emailLabel}</p>
-            <p className="text-muted-foreground mb-3">{emailDescription}</p>
+            <p className="mb-2 max-md:mb-1 text-lg font-semibold">{emailLabel}</p>
+            <p className="text-muted-foreground mb-3 max-md:mb-1">{emailDescription}</p>
             <a href={`mailto:${email}`} className="font-semibold hover:underline">
               {email}
             </a>
           </div>
-          <div className="bg-muted rounded-lg p-6">
-            <span className="bg-accent mb-3 flex size-12 flex-col items-center justify-center rounded-full">
+
+          <div className="bg-muted rounded-lg p-6 max-md:p-5">
+            <span className="bg-accent mb-3 max-md:mb-0 flex size-12 flex-col items-center justify-center rounded-full">
               <MapPin className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-lg font-semibold">{officeLabel}</p>
-            <p className="text-muted-foreground mb-3">{officeDescription}</p>
+            <p className="mb-2 max-md:mb-1 text-lg font-semibold">{officeLabel}</p>
+            <p className="text-muted-foreground mb-3 max-md:mb-1">{officeDescription}</p>
             <a href="#" className="font-semibold hover:underline">
               {officeAddress}
             </a>
           </div>
-          <div className="bg-muted rounded-lg p-6">
-            <span className="bg-accent mb-3 flex size-12 flex-col items-center justify-center rounded-full">
+
+          <div className="bg-muted rounded-lg p-6 max-md:p-5">
+            <span className="bg-accent mb-3 max-md:mb-0 flex size-12 flex-col items-center justify-center rounded-full">
               <Phone className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-lg font-semibold">{phoneLabel}</p>
-            <p className="text-muted-foreground mb-3">{phoneDescription}</p>
+            <p className="mb-2 max-md:mb-1 text-lg font-semibold">{phoneLabel}</p>
+            <p className="text-muted-foreground mb-3 max-md:mb-1">{phoneDescription}</p>
             <a href={`tel:${phone}`} className="font-semibold hover:underline">
               {phone}
             </a>
           </div>
-          <div className="bg-muted rounded-lg p-6">
-            <span className="bg-accent mb-3 flex size-12 flex-col items-center justify-center rounded-full">
+
+          <div className="bg-muted rounded-lg p-6 max-md:p-5">
+            <span className="bg-accent mb-3 max-md:mb-0 flex size-12 flex-col items-center justify-center rounded-full">
               <MessageCircle className="h-6 w-auto" />
             </span>
-            <p className="mb-2 text-lg font-semibold">{chatLabel}</p>
-            <p className="text-muted-foreground mb-3">{chatDescription}</p>
+            <p className="mb-2 max-md:mb-1 text-lg font-semibold">{chatLabel}</p>
+            <p className="text-muted-foreground mb-3 max-md:mb-1">{chatDescription}</p>
             <a href="#" className="font-semibold hover:underline">
               {chatLink}
             </a>

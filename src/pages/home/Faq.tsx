@@ -58,11 +58,11 @@ const faq: FaqProps = {
 
 const Faq = () => {
   return (
-    <section className="py-32">
-      <div className="container space-y-16 mx-auto">
+    <section className="py-10 px-10">
+      <div className="container space-y-5 mx-auto">
         <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-          <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">{faq.heading}</h2>
-          <p className="text-muted-foreground lg:text-lg">{faq.description}</p>
+          <h2 className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg font-bold">{faq.heading}</h2>
+          <p className="text-muted-foreground text-balance 2xl:text-xl xl:text-lg lg:text-sm text-sm">{faq.description}</p>
         </div>
         <Accordion type="single" collapsible className="mx-auto w-full lg:max-w-3xl">
           {faq.items?.map((item) => (
