@@ -17,14 +17,12 @@ import {ModeToggle} from "./ModeToggle";
 import {useGetProfileQuery} from "@/redux/features/auth/auth.api";
 import {role} from "@/constants/role";
 
-// Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
   {href: "/", label: "Home", role: role.public},
   {href: "/admin", label: "Dashboard", role: role.admin},
   {href: "/super-admin", label: "Dashboard", role: role.superAdmin},
   {href: "/sender", label: "Dashboard", role: role.sender},
   {href: "/receiver", label: "Dashboard", role: role.receiver},
-  // { href: "/", label: "Pricing", role: role.public },
   {
     label: "About",
     submenu: true,

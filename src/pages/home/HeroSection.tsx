@@ -20,11 +20,11 @@ const HeroSection = ({
   description = "Your parcels, documents, and essentials—picked up and delivered with care across Bangladesh.",
 }: Hero7Props) => {
   return (
-    <section className="py-20 max-md:py-10">
+    <section className="2xl:py-20 xl:py-16 lg:py-12 md:py-10 py-8">
       <div className="container text-center mx-auto">
-        <div className="mx-auto flex max-w-5xl flex-col gap-6 max-md:gap-3">
-          <h1 className="text-3xl font-extrabold lg:text-6xl max-md:text-xl">{heading}</h1>
-          <p className="text-muted-foreground text-balance lg:text-lg max-md:text-sm">{description}</p>
+        <div className="2xl:space-y-10 xl:space-y-8 lg:space-y-6 md:space-y-4 space-y-3">
+          <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl font-extrabold max-md:text-xl">{heading}</h1>
+          <p className="text-muted-foreground text-balance 2xl:text-xl xl:text-lg lg:text-sm text-sm">{description}</p>
         </div>
       </div>
     </section>
