@@ -49,7 +49,7 @@ const Footer = ({
 }: Footer7Props) => {
   return (
     <section>
-      <div className="w-full mx-auto container space-y-8 py-16 max-md:px-6 max-md:py-5 border px-10 rounded-2xl">
+      <div className="w-full mx-auto container space-y-8 py-16 max-md:px-6 max-md:py-5 border px-10 rounded-2xl mb-10 max-md:mb-5">
         <div className="flex w-full flex-col justify-between gap-10 max-md:gap-5 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 max-md:gap-3 lg:items-start">
             <div className="flex items-center gap-2 lg:justify-start">
