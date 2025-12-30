@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Mobile menu trigger */}
           <Popover>
             <PopoverTrigger asChild>
-              <Button className="group size-8 md:hidden" variant="ghost" size="icon">
+              <Button className="group size-8 md:hidden border" variant="ghost" size="icon">
                 <Logo></Logo>
               </Button>
             </PopoverTrigger>

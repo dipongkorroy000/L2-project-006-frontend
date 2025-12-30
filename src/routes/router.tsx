@@ -18,6 +18,7 @@ import ContactUs from "@/pages/ContactUs";
 import GetStarted from "@/pages/GetStarted";
 import Success from "@/pages/Success";
 import Home from "@/pages/Home";
+import PrivacyPage from "@/components/modules/home/Privacy";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       {path: "/contact-us", Component: ContactUs},
       {path: "/about-us", Component: AboutUs},
       {path: "/get-us", Component: GetStarted},
+      {path: "/privacy", Component: PrivacyPage},
     ],
   },
   {
