@@ -15,10 +15,11 @@ import generateRoutes from "@/utils/generateRoutes";
 import receiverSidebarItems from "./receiverSidebarItems";
 import AboutUs from "@/pages/AboutUs";
 import ContactUs from "@/pages/ContactUs";
-import GetStarted from "@/pages/GetStarted";
+import TrackingParcel from "@/pages/TrackingParcel";
 import Success from "@/pages/Success";
 import Home from "@/pages/Home";
 import PrivacyPage from "@/components/modules/home/Privacy";
+import Faq from "@/pages/home/Faq";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,12 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       {index: true, Component: Home},
-      {path: "profile", Component: withAuth(Profile)},
+      {path: "/profile", Component: withAuth(Profile)},
       {path: "/contact-us", Component: ContactUs},
       {path: "/about-us", Component: AboutUs},
-      {path: "/get-us", Component: GetStarted},
+      {path: "/tracking-parcel", Component: TrackingParcel},
       {path: "/privacy", Component: PrivacyPage},
+      {path: "/faq", Component: Faq},
     ],
   },
   {

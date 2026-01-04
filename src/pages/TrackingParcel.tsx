@@ -1,8 +1,7 @@
 import {useAnyOneFindParcelQuery} from "@/redux/features/parcel/parcel.api";
 import {useState} from "react";
-import Faq from "./home/Faq";
 
-const GetStarted = () => {
+const TrackingParcel = () => {
   const [trackingId, setTrackingId] = useState<string>("");
   const [submittedId, setSubmittedId] = useState<string | null>(null);
 
@@ -67,10 +66,8 @@ const GetStarted = () => {
           </div>
         )}
       </div>
-
-      <Faq></Faq>
     </section>
   );
 };
 
-export default GetStarted;
+export default TrackingParcel;

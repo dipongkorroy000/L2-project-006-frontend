@@ -28,7 +28,7 @@ const navigationLinks = [
     submenu: true,
     type: "icon",
     items: [
-      {href: "/get-us", label: "Getting Started", icon: "BookOpenIcon"},
+      {href: "/tracking-parcel", label: "Track Parcel", icon: "BookOpenIcon"},
       {href: "/contact-us", label: "Contact Us", icon: "LifeBuoyIcon"},
       {href: "/about-us", label: "About Us", icon: "InfoIcon"},
     ],

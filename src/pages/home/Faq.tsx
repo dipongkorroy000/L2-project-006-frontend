@@ -60,7 +60,7 @@ const Faq = () => {
   return (
     <section className="py-10 px-10">
       <div className="container space-y-5 mx-auto">
-        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
+        <div className="mx-auto flex max-w-3xl flex-col text-left space-y-3">
           <h2 className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg font-bold">{faq.heading}</h2>
           <p className="text-muted-foreground text-balance 2xl:text-xl xl:text-lg lg:text-sm text-sm">{faq.description}</p>
         </div>

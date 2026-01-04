@@ -1,6 +1,7 @@
 import Logo from "@/assets/icons/Logo";
 import React from "react";
 import {FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import {Link} from "react-router";
 
 interface Footer7Props {
   logo?: {url: string; src: string; alt: string; title: string};
@@ -16,7 +17,7 @@ const defaultSections = [
     title: "Product",
     links: [
       {name: "Overview", href: "#"},
-      {name: "Frequently asked questions", href: "#"},
+      {name: "Frequently asked questions", href: "/faq"},
     ],
   },
   {
@@ -70,13 +71,11 @@ const Footer = ({
           <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
             {sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold max-md:mb-2">{section.title}</h3>
+                <h3 className="mb-4 font-bold max-md:mb-2">Product</h3>
                 <ul className="text-muted-foreground space-y-3 text-sm max-md:space-y-1">
                   {section.links.map((link, linkIdx) => (
                     <li key={linkIdx} className="hover:text-primary font-medium">
-                      <a target="_blank" href={link.href}>
-                        {link.name}
-                      </a>
+                      <Link to={link.href}>{link.name}</Link>
                     </li>
                   ))}
                 </ul>
