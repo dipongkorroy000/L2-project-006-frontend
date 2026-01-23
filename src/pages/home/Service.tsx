@@ -39,7 +39,7 @@ const Service = () => {
       <div className="container mx-auto text-center space-y-6">
         {/* Heading */}
         <div className="max-w-2xl mx-auto space-y-4">
-          <h1 className="text-xl md:text-4xl font-bold">Track Your Parcel in Real Time</h1>
+          <h1 className="text-xl lg:text-4xl md:text-2xl font-bold">Track Your Parcel in Real Time</h1>
           <p className="text-muted-foreground text-sm md:text-lg">
             Enter your tracking ID and get instant updates on your parcel’s journey—from pickup to delivery.
           </p>
