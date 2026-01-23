@@ -12,27 +12,41 @@ import {toast} from "sonner";
 import z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 
-const loginSchema = z.object({email: z.email(), password: z.string()});
+const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string(),
+});
 
 export function LoginForm({className, ...props}: React.HTMLAttributes<HTMLDivElement>) {
   const navigate = useNavigate();
-  const form = useForm({resolver: zodResolver(loginSchema), defaultValues: {email: "", password: ""}});
+  const form = useForm({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {email: "", password: ""},
+  });
   const [login] = useLoginMutation();
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       const res = await login(data as ILogin).unwrap();
-
-      console.log(res);
-
       if (res.success) {
         toast.success("Logged in successfully");
         navigate("/");
       }
-
-      // -----
     } catch (error: any) {
-      if (error.data.message) toast.error(error.data.message);
+      if (error.data?.message) toast.error(error.data.message);
+    }
+  };
+
+  // Generic demo login handler
+  const handleDemoLogin = async (demoData: ILogin, label: string) => {
+    try {
+      const res = await login(demoData).unwrap();
+      if (res.success) {
+        toast.success(`Logged in as ${label}`);
+        navigate("/");
+      }
+    } catch (error: any) {
+      toast.error(error.data?.message || "Login failed");
     }
   };
 
@@ -44,6 +58,7 @@ export function LoginForm({className, ...props}: React.HTMLAttributes<HTMLDivEle
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            {/* Email */}
             <FormField
               control={form.control}
               name="email"
@@ -58,6 +73,7 @@ export function LoginForm({className, ...props}: React.HTMLAttributes<HTMLDivEle
               )}
             />
 
+            {/* Password */}
             <FormField
               control={form.control}
               name="password"
@@ -72,9 +88,40 @@ export function LoginForm({className, ...props}: React.HTMLAttributes<HTMLDivEle
               )}
             />
 
+            {/* Submit */}
             <Button type="submit" className="w-full text-white">
               Login
             </Button>
+
+            {/* Demo Buttons */}
+            <div className="space-y-3">
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() => handleDemoLogin({email: "dip@gmail.com", password: "abAB12**"}, "Demo Admin")}
+              >
+                Login as Demo Admin
+              </Button>
+
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() => handleDemoLogin({email: "dipongkorroy00000@gmail.com", password: "abAB12**"}, "Demo Sender")}
+              >
+                Login as Demo Sender
+              </Button>
+
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() => handleDemoLogin({email: "diproy0990@gmail.com", password: "abAB12**"}, "Demo Receiver")}
+              >
+                Login as Demo Receiver
+              </Button>
+            </div>
           </form>
         </Form>
       </div>
