@@ -35,7 +35,7 @@ const features: Feature[] = [
 
 const Service = () => {
   return (
-    <section className="py-16 lg:py-24 bg-background px-5">
+    <section className="py-16 lg:py-30 bg-background px-5">
       <div className="container mx-auto text-center space-y-6">
         {/* Heading */}
         <div className="max-w-2xl mx-auto space-y-4">
