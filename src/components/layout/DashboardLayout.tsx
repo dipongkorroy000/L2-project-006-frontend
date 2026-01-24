@@ -2,9 +2,12 @@ import {AppSidebar} from "@/components/app-sidebar";
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator} from "@/components/ui/breadcrumb";
 import {Separator} from "@/components/ui/separator";
 import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
-import {Outlet} from "react-router";
+import {Outlet, useLocation} from "react-router";
 
 export default function DashboardLayout() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -15,7 +18,7 @@ export default function DashboardLayout() {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Building Your Application</BreadcrumbLink>
+                <BreadcrumbLink>{currentPath.split("/").filter(Boolean).pop()}</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="hidden md:block" />
             </BreadcrumbList>
