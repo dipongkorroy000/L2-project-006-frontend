@@ -15,7 +15,8 @@ const MyParcels = () => {
   const {data, isLoading} = useIncomingParcelsQuery(undefined);
   const [confirmParcel] = useConfirmParcelMutation();
   const profile = userData?.data;
-  const parcels = data?.data;
+  const parcels = Array.isArray(data?.data) ? data.data : [];
+
   const email = profile?.email;
 
   const handelPicked = async (trackingId: string) => {
@@ -44,7 +45,7 @@ const MyParcels = () => {
       <h2>Receiver parcels</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
-        {parcels?.map((parcel: GetParcel) => (
+        {parcels.map((parcel: GetParcel) => (
           <Card key={parcel._id}>
             <CardHeader>
               <CardTitle className="text-lg font-semibold">
